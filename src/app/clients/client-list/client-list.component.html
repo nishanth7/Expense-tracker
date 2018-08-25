@@ -1,0 +1,21 @@
+<h6 class="text-center">Client List</h6><br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let client of clientList">
+      <td>{{client.name}}</td>
+      <td>{{client.position}}</td>
+      <td>
+        <a class="btn" (click)="onEdit(client)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn" (click)="onDelete(client.$key)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+        <a class="btn" (click)="openAddExpense(client)">
+          Add expense
+        </a>
+        <a class="btn" (click)="showExpense(client)">
+          Show expense
+        </a>
+      </td>
+  </tr>
+</table>
