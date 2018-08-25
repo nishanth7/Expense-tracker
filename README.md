@@ -8,7 +8,7 @@ Technologies Used
 
 Angular 5
 
-Firebase web api
+Firebase real time database
 
 Development:
 
