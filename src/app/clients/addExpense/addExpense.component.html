@@ -2,12 +2,20 @@
 <form #addExpenseForm="ngForm" (ngSubmit)="onSubmit(addExpenseForm)">
     <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="clientService.selectedClient.$key">
   <div class="form-group">
-    <label>Expense name</label>
-    <input class="form-control" name="expenseName" #name="ngModel" [(ngModel)]="expenseName" placeholder="Expense Name" required>
+    <label>Expense title</label>
+    <input class="form-control" name="expenseName"  [(ngModel)]="expenseName" placeholder="Expense Name" required>
   </div>
   <div class="form-group">
-    <label>Expense name</label>
-    <input class="form-control" name="expenseValue" #name="ngModel" [(ngModel)]="expenseValue" placeholder="Expense value" required>
+    <label>Expense amount</label>
+    <input class="form-control" name="expenseValue"  [(ngModel)]="expenseValue" placeholder="Expense value" required>
+  </div>
+  <div class="form-group">
+    <label>Expense currency</label>
+    <input class="form-control" name="expenseCurrency"  [(ngModel)]="expenseCurrency" placeholder="Expense currency" required>
+  </div>
+  <div class="form-group">
+    <label>Expense description</label>
+    <input class="form-control" name="expenseDesc" [(ngModel)]="expenseDesc" placeholder="Expense dexcription" required>
   </div>
   <div class="form-group">
     <button class="btn btn-default" type="submit" [disabled]="!addExpenseForm.valid">
