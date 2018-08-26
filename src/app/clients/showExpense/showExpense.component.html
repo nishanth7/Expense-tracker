@@ -1,7 +1,15 @@
 <h6 class="text-center">Expense list of {{clientService.selectedClient.name}}</h6><br/>
 <table class="table table-sm table-hover">
+<thead>
+  <th>Expense title</th>
+  <th>Expense amount</th>
+  <th>Expense currency</th>
+  <th>Expense description</th>
+</thead>
 <tr *ngFor="let key of expenseKeys">
       <td>{{key}}</td>
-      <td>{{expenses[key]}}</td>
+      <td>{{expenses[key].expValue}}</td>
+      <td>{{expenses[key].expCurrency}}</td>
+      <td>{{expenses[key].expDescription}}</td>
   </tr>
 </table>
