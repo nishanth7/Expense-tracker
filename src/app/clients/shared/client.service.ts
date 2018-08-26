@@ -25,14 +25,16 @@ export class ClientService {
   updateClient(client: any) {
     const exp = {
       expName: client.expenseName,
-      expValue: client.expenseValue
+      expValue: client.expenseValue,
+      expCurrency: client.expenseCurrency,
+      expDescription: client.expenseDesc
     };
    // this.selectedClient.expense.push(exp);
     if (this.selectedClient.expense === undefined || this.selectedClient.expense === null) {
     this.selectedClient.expense = { };
    }
    if (client.expenseName !== undefined) {
-    this.selectedClient.expense[client.expenseName] = client.expenseValue;
+    this.selectedClient.expense[client.expenseName] = exp;
    }
     this.clientList.update(client.$key,
       {
