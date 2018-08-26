@@ -11,6 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 export class AddExpenseComponent implements OnInit {
     expenseValue: number;
     expenseName: string;
+    expenseCurrency: string;
+    expenseDesc: string;
   constructor(public clientService: ClientService, public tostr: ToastrService) { }
 
   ngOnInit() {
@@ -24,7 +26,9 @@ export class AddExpenseComponent implements OnInit {
         $key: addExpenseForm.value.$key,
         name: this.clientService.selectedClient.name,
         expenseName: addExpenseForm.value.expenseName,
-        expenseValue: addExpenseForm.value.expenseValue
+        expenseValue: addExpenseForm.value.expenseValue,
+        expenseCurrency: addExpenseForm.value.expenseCurrency,
+        expenseDesc: addExpenseForm.value.expenseDesc,
       };
       this.clientService.updateClient(exp);
     }
