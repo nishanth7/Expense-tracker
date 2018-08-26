@@ -2,17 +2,17 @@
   <h2 style="margin-bottom: 20px; background-color: greenyellow; height: 45px;">Expense tracker</h2>
 </div>
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-5">
     <app-client-list></app-client-list>
     <button class="btn btn-primary" (click)="addClient()">Add client</button>
   </div>
-  <div *ngIf="view == 'addClient'" class="col-md-5">
+  <div *ngIf="view == 'addClient'" class="col-md-7">
     <app-client></app-client>
   </div>
-  <div *ngIf="view == 'addexpense'" class="col-md-5">
+  <div *ngIf="view == 'addexpense'" class="col-md-7">
     <app-addexpense></app-addexpense>
   </div>
-  <div *ngIf="view == 'showExpense'" class="col-md-5">
+  <div *ngIf="view == 'showExpense'" class="col-md-7">
     <app-showexpense-list></app-showexpense-list>
   </div>
 </div>
